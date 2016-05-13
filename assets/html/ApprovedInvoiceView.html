@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+
+    <title>Broad Institute</title>
+    <!--STYLES-->
+    <!--STYLES END-->
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <a href="#" class="logo"><img src="images/logo.png" /></a>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                    <ul class="userAccount">
+                        <li class="Username"><a>{{user}}</a></li>
+                        <li class="notification glyphicon glyphicon-bell"></li>
+                        <li class="logout glyphicon glyphicon-off"><a href="login.html"></a></li>
+                        <li class="filterTrigger">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <span class="contentHead">approved</span>
+                <div class="tabCover">
+                    <h4 class="ContentHeading">Invoices</h4>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="table-responsive">
+                                <table class="tableForm">
+                                    <tr>
+                                        <td width='40%'><label>Vendor:</label></td>
+                                        <td>{{invoiceSelected[0].VendorName}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Invoice Number:</label></td>
+                                        <td>{{invoiceSelected[0].InvoiceNo}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>PO Number:</label></td>
+                                        <td>{{invoiceSelected[0].PoNo}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Invoice Text:</label></td>
+                                        <td>{{invoiceSelected[0].InvoiceText}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Invoice Date:</label></td>
+                                        <td>{{invoiceSelected[0].createdAt}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Invoice Amount:</label></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="table-responsive">
+                                <table class="tableForm">
+                                    <tr>
+                                        <td width='40%'><label>Vendor No:</label></td>
+                                        <td>365678</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Document:</label></td>
+                                        <td>126856-M</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><label>Buyer:</label></td>
+                                        <td>Jhon</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Days In queue:</label></td>
+                                        <td>25</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Status:</label></td>
+                                        <td>Approved</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>ApprovedDate:</label></td>
+                                        <td>02/16/2016</td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        Approval Record generated Succesfully
+                    </div>
+
+                    <hr>
+                    <div class="doc"></div>
+                    <button class="btn btn-primary">Save</button><button class="btn btn-default">Back</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--SCRIPTS-->
+    <!--SCRIPTS END-->
+</body>
+</html>

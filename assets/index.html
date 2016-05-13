@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body ng-app="siaApp" ng-controller="AuthController">
+    <!--STYLES-->
+    <!--STYLES END-->
+    <style>
+    </style>
+    <div ui-view="">
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <a href="#" class="logo"><img src="images/logo.png" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-0"></div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="loginBox">
+                    <h3>Login</h3>
+                    <input type="text" value="" ng-model="data.username" /><br>
+                    <input type="text" value="" ng-model="data.password" />
+                    <div class="text-right">
+                        <button class="loginButton btn btn-primary" ng-click="loginCheck(data)">Login</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-0"></div>
+        </div>
+
+    </div>
+        <!--SCRIPTS-->
+        <!--SCRIPTS END-->
+</body>
+
+</html>

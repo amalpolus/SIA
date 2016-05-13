@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+
+    <title>Broad Institute</title>
+    <!--STYLES-->
+    <!--STYLES END-->
+</head>
+<body>
+    <div ui-view=""></div>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <a class="logo"><img src="images/logo.png" /></a>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                    <ul class="userAccount">
+                        <li class="Username"><a>{{user}}</a></li>
+                        <li class="notification glyphicon glyphicon-bell"></li>
+                        <li class="logout glyphicon glyphicon-off"><a href="login.html"></a></li>
+                        <li class="filterTrigger">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12">
+                <button class="doc"  ng-click="gotoApprover(user)">Approver Dash</button>
+            </div>
+            <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12">
+                <button class="doc" ng-show="buyer" ng-click="gotoBuyer(user)">Buyer Dash</button>
+            </div>
+            <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12">
+                <button class="doc" ng-show="ap" ng-click=" gotoAP(user)">AP Dash</button>
+            </div>
+            </div>
+    </div>
+
+</body>
+</html>

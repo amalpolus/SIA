@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+
+    <title>Broad Institute</title>
+    <!--STYLES-->
+    <!--STYLES END-->
+</head>
+
+<body>
+    <div ui-view=""></div>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <a class="logo"><img src="images/logo.png" /></a>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                    <ul class="userAccount">
+                        <li class="Username"><a>{{user}}</a></li>
+                        <li class="notification glyphicon glyphicon-bell"></li>
+                        <li class="logout glyphicon glyphicon-off"><a href="login.html"></a></li>
+                        <li class="filterTrigger">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <span class="contentHead">Approver Invoice View</span>
+
+                <div class="tabCover">
+                    <h4 class="ContentHeading">Invoices</h4>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="table-responsive">
+                                <table class="table skin">
+                                    <tr>
+                                        <th>Vendor</th>
+                                        <th>Vendor Name</th>
+                                        <th>Document</th>
+                                        <th>PO Number</th>
+                                        <th>Text</th>
+                                        <th>Invoice#</th>
+                                        <th>Invoice Date</th>
+                                        <th>Amount</th>
+                                        <th>Receipient</th>
+                                        <th>Comments</th>
+                                        <th>Approval status</th>
+                                        <th>Days in Queue</th>
+                                        <th>View</th>
+                                    </tr>
+                                    <tr ng-repeat="inv in aprInvoices">
+                                        <td>{{inv.VendorId}}</td>
+                                        <td>{{inv.VendorName}}</td>
+                                        <td>{{inv.InvoiceNo}}</td>
+                                        <td>{{inv.PoNo}}</td>
+                                        <td>{{inv.InvoiceText}} </td>
+                                        <td></td>
+                                        <td>{{inv.createdAt}}</td>
+                                        <td></td>
+                                        <td>{{inv.Buyer}}</td>
+                                        <td></td>
+                                        <td>{{inv.Status}}</td>
+                                        <td></td>
+                                        <td><button ui-sref="view({invoice:inv.InvoiceNo,user:user,role:'Approver'})" class="view glyphicon glyphicon-eye-open" ng-click=""></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="13">
+                                            <div class="paginationBox">
+                                                <nav>
+                                                    <ul class="pagination">
+                                                        <li>
+                                                            <a href="#" aria-label="Previous">
+                                                                <span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li><a>1</a></li>
+                                                        <li ><a >2</a></li>
+                                                        <li><a >3</a></li>
+                                                        <li><a>4</a></li>
+                                                        <li><a>5</a></li>
+                                                        <li>
+                                                            <a aria-label="Next">
+                                                                <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--SCRIPTS-->
+    <!--SCRIPTS END-->
+</body>
+</html>
